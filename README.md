@@ -2,6 +2,21 @@
 
 Eu fiz esse scriptzinho pra não ter que ficar fazendo manualmente o embelezamento dos horários que a UEM manda, já que tô fazendo pra alguns amigos também, achei que poderia ser útil pra mais alguém então tô compartilhando aqui no GitHub também.
 
+Depois de feito, fica muito mais tranquilo formatar e editar.
+
+NOTA: Sempre cheque se todos os dados das aulas estão certos. Não posso garantir que sempre vai sair certo.
+
+Torna isso:
+
+![antigo](https://user-images.githubusercontent.com/88753590/179155178-8413fa2c-0598-4a7e-8147-1c68dcf87075.PNG)
+
+
+Nisso:
+
+![novo](https://user-images.githubusercontent.com/88753590/179155364-42ad58b2-25c2-4bf8-a80a-eae133f63a54.PNG)
+
+(o segundo semestre aparece logo depois)
+
 ## Como eu uso isso?
 1. Renomeia o PDF do seu horário para "horario.pdf"
 2. Coloca ele na mesma pasta que o ```main.py```
@@ -12,7 +27,7 @@ A sequência de comandos no Prompt de Comando (Windows) ou no terminal (linux) �
 
 ```cd "caminho/para/a/pasta"``` <-- Pasta onde os arquivos estão
 
-```pip install requirements.txt```
+```pip install -r requirements.txt```
 
 ```python main.py```
 
