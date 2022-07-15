@@ -1,22 +1,21 @@
 # Conversor de horários de aulas da UEM
 
-Eu fiz esse scriptzinho pra não ter que ficar fazendo manualmente o embelezamento dos horários que a UEM manda, já que tô fazendo pra alguns amigos também, achei que poderia ser útil pra mais alguém então tô compartilhando
-aqui no GitHub também.
+Eu fiz esse scriptzinho pra não ter que ficar fazendo manualmente o embelezamento dos horários que a UEM manda, já que tô fazendo pra alguns amigos também, achei que poderia ser útil pra mais alguém então tô compartilhando aqui no GitHub também.
 
 ## Como eu uso isso?
+1. Renomeia o PDF do seu horário para "horario.pdf"
+2. Coloca ele na mesma pasta que o ```main.py```
+3. Rode o script
 
-Se você já rodou scripts de Python antes:
-1. Só da um ```pip install``` no ```requirements.txt```
-2. Renomeia o PDF (tem que ser em PDF) do seu horário para "horario.pdf" e coloca ele na mesma pasta (diretório) que o ```main.py```
-3. Roda o script com ```python main.py```
+Se você nunca rodou um script de Python antes, é só instalar o Python, colocar ele nas variáveis de ambiente do seu computador, instalar os módulos necessários e rodar.
+A sequência de comandos no Prompt de Comando (Windows) ou no terminal (linux) é mais ou menos a seguinte:
 
-Se você nunca rodou scripts de Python antes:
-1. Instala o Python no https://www.python.org/downloads/
-2. Segue os processos de instalação.
-3. Baixa todos os aquivos (incluindo o venv)
-4. Renomeia o PDF (tem que ser em PDF) do seu horário para "horario.pdf" e coloca ele na mesma pasta (diretório) que o ```main.py```
-5. Roda o script com ```python main.py```
+```cd "caminho/para/a/pasta"``` <-- Pasta onde os arquivos estão
 
-NOTA: Se o seu horário tem três páginas, essa terceira não vai aparecer porque eu ainda não implementei ela.
+```pip install requirements.txt```
 
-Se ainda não deu certo, só me dá um toque ou pesquisa na net, tem um milhão de tutoriais só disso.
+```python main.py```
+
+Se tudo deu certo, um arquivo chamado "Horario.xlsx" deve ter aparecido, se aconteceu algum erro, existem diversos tutoriais na internet para te ajudar.
+
+PS: Alguns cursos tem uma terceira folha de matérias modulares. Eu ainda não implementei essas daí então elas não vão aparecer.
