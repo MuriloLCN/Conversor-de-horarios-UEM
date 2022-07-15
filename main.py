@@ -99,6 +99,7 @@ def editar_tabela(textinho: str):
     colunas = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     # Dava pra fazer tudo em um loop só mas já é de madrugada
+    # TODO: Limpar isso amanhã
 
     # Manhã 1 semestre
     for i in range(5):
@@ -165,7 +166,6 @@ def pegar_materias(textinho: str):
 
     texto_cortado = textinho.split('*')
     # Tem 112 '*' antes da parte onde ficam as matérias
-    pegar_texto_linha(texto_cortado[16 * 6])  # 2-3-4-5-6
     parte_materias = texto_cortado[112]
     corte = parte_materias.split('\n')
     # Começando no index 4 pra tirar o cabeçalho
@@ -198,23 +198,6 @@ def juntar_partes(arr, index):
     except IndexError:
         return ' '
 
-
-def pegar_texto_linha(texto_linha: str):
-    partes = texto_linha.split('|')
-    seg_m = juntar_partes(partes, 3)
-    ter_m = juntar_partes(partes, 4)
-    qua_m = juntar_partes(partes, 5)
-    qui_m = juntar_partes(partes, 6)
-    sex_m = juntar_partes(partes, 7)
-    sab_m = juntar_partes(partes, 8)
-
-    seg_t = juntar_partes(partes, 12)
-    ter_t = juntar_partes(partes, 13)
-    qua_t = juntar_partes(partes, 14)
-    qui_t = juntar_partes(partes, 15)
-    sex_t = juntar_partes(partes, 16)
-    sab_t = juntar_partes(partes, 17)
-    pass
 
 
 texto = pegar_texto()
