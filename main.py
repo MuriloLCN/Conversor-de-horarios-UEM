@@ -98,9 +98,6 @@ def editar_tabela(textinho: str):
 
     colunas = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
-    # Dava pra fazer tudo em um loop só mas já é de madrugada
-    # TODO: Limpar isso amanhã
-
     # Manhã 1 semestre
     for i in range(5):
         i += 1
@@ -132,6 +129,11 @@ def editar_tabela(textinho: str):
 
         segmento = parte_linha.split('|')
 
+        # Nos horários de quem entrou por cotas aparecem 20 asteriscos a mais
+        if segmento == ['---------']:
+            parte_linha = partes[(i + 8) * 16 + 24]
+            segmento = parte_linha.split('|')
+
         for j in range(6):
             seg = juntar_partes(segmento, j + 3)
             seg = sobrepor_nomes(seg)
@@ -143,6 +145,10 @@ def editar_tabela(textinho: str):
         parte_linha = partes[(i + 8) * 16 + 4]
 
         segmento = parte_linha.split('|')
+
+        if segmento == ['---------']:
+            parte_linha = partes[(i + 8) * 16 + 24]
+            segmento = parte_linha.split('|')
 
         for j in range(6):
             seg = juntar_partes(segmento, j + 12)
@@ -199,7 +205,10 @@ def juntar_partes(arr, index):
         return ' '
 
 
-
-texto = pegar_texto()
-pegar_materias(texto)
-editar_tabela(texto)
+try:
+    texto = pegar_texto()
+    pegar_materias(texto)
+    editar_tabela(texto)
+except fitz.FileNotFoundError:
+    print("Não há nenhum arquivo com o nome 'horario.pdf' para ser lido")
+    exit()
